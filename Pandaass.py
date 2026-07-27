@@ -1,0 +1,18 @@
+import pandas as pd
+import numpy as np
+df=pd.DataFrame()
+df=pd.read_csv("cardata.csv")
+df.head()
+print(df.head())
+df.tail()
+print(df.tail())
+df.info()
+print(df.info())
+df.describe()
+print(df.describe())
+print("loc example (rows 0-2, specific columns):")
+print(df.loc[0:2, ["Present_Price", "Kms_Driven", "Transmission"]])
+print("\niloc example (first 3 rows, first 3 columns):")
+print(df.iloc[0:3, 0:3])
+print("\nBoolean indexing (Car_Name== 'ertiga'):")
+print(df[df["Car_Name"] == "ertiga"])
